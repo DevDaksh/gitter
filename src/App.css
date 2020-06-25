@@ -1,20 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Josefin+Sans:ital,wght@1,300&family=Nanum+Gothic:wght@700&family=Open+Sans:ital,wght@1,600&family=Ubuntu:ital@0;1&display=swap');
 
 .App-header {
-  background-color: #282c34;
+  background: linear-gradient(to right, #43c6ac, #191654);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +11,98 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.card img{
+  border-radius: 50%;
+  border: groove;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card{
+  padding: 1rem 2rem 0 2rem;
+  width: 25rem;
+  background: none;
+  visibility: hidden;
+  border: none;
+  color: whitesmoke;
+}
+
+.card-body{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.list-group-item{
+  background: none;
+  width: 100%;
+  border-bottom: 0.2px solid rgba(230, 230, 250, 0.596);
+}
+
+.terminal{
+  margin-right: 1rem;
+  font-family: 'Inconsolata', monospace;
+}
+/* profile */
+
+.card-title{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+} 
+
+.card-body center b, .card-body center h3 {
+  font-family: 'Nanum Gothic', sans-serif
+}
+
+.card-text {
+  font-family: 'Josefin Sans', sans-serif;
+  color: whitesmoke !important;
+}
+
+/* form */
+
+.dataForm{
+  height: 1rem;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dataForm .input{
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.dataForm .input input{
+  background: none;
+}
+.dataForm .input input::placeholder{
+ color: whitesmoke;
+}
+
+.dataForm a span{
+  height: 2.5rem;
+}
+
+/* nav */
+
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 89, 167);
+  height: 10vh;
+  width: 100%;
+  background: linear-gradient(to left, #43c6ac, #191654);
+  box-shadow: 0px 0px 20px 0px black;
+  display: none;
+}
+
+
+/* spinner */
+
+.spinner-border {
+visibility: hidden;
+margin: 1rem 0 1rem 0;
 }
