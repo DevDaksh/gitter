@@ -1,6 +1,6 @@
 import React from 'react';
-import Profile from './Profile';
-import Nav from './Nav'
+import Profile from './components/Profile';
+import Nav from './components/Nav'
 import axios from 'axios';
 import './App.css';
 
@@ -78,7 +78,7 @@ class App extends React.Component {
             <div className="terminal">~$ git --view </div>
 
             <div className="input">
-              <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="material-addon1" onChange={e => this.setState({ username: e.target.value })} />
+              <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="material-addon1" onChange={e => this.setState({ username: e.target.value })} />
             </div>
             <div className="btn btn-social-icon btn-github" onClick={getData}>
               <span className="fa fa-github"></span>

@@ -6,7 +6,7 @@ class Profile extends React.Component {
         const repos = details.repoList.map(el => {
             return (
                 <li className="list-group-item" key={el.id}>
-                    <a href={el.html_url} target="_blank" rel="noopener noreferrer">{el.full_name}</a>
+                    <a href={el.html_url} target="_blank" rel="noopener noreferrer" key={el.id}>{el.full_name}</a>
                     <br />
                     <span>Size: {el.size}kB</span>
                     <br />
@@ -14,7 +14,6 @@ class Profile extends React.Component {
                 </li>
             )
         })
-        console.log(details.repoList)
         return (
             <div>
                 <div className="card">
@@ -24,15 +23,18 @@ class Profile extends React.Component {
                             <h5 className="card-title">{details.name}</h5>
                             <p className="card-text">{details.bio}</p>
                             <b>Total Public Repos: {details.repos}</b>
+                            <br />
+                            <br />
+                            <a href={details.profLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Visit on Github</a>
+                            <br />
+                            <br />
+                            <center><h3><i>Repositories </i></h3></center>
+                            <br />
+                            <hr className="separator" />
+                            <ul className="list-group list-group-flush">
+                                {repos}
+                            </ul>
                         </center>
-                        <br />
-                        <a href={details.profLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Visit on Github</a>
-                        <br />
-                        <center><h3>Repositories</h3></center>
-                        <br />
-                        <ul className="list-group list-group-flush">
-                            {repos}
-                        </ul>
                     </div>
                 </div>
             </div >
